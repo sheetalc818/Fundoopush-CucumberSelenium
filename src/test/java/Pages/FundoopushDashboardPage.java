@@ -49,8 +49,11 @@ public class FundoopushDashboardPage extends BasicActions
 	@FindBy(xpath="//div[@class='quill-style']")
 	private WebElement AddImageBtn;
 	
-	private static String filePath = System.getProperty("user.dir") + "/home/admin1/eclipse-workspace/CucumberFundoopush/src/test/resources/Image/3D-Nature-Images-Free-Download.jpg";
+	private static String filePath = System.getProperty("user.dir") + "//home/admin1/Aimage/Nature-Images-Free-Download.jpg";
 
+	@FindBy(xpath="//i[@class='material-icons save-btn']")
+	private WebElement UploadBtn;
+	
 	//===========================================Methods=============================================//
 	
 	public FundoopushDashboardPage(WebDriver driver) 
@@ -102,7 +105,8 @@ public class FundoopushDashboardPage extends BasicActions
 		addImage(AddImageBtn);
 		Thread.sleep(500);
 		uploadFileWithRobot(filePath);
-		Thread.sleep(10000);
-		
+		Thread.sleep(3000);
+		Clickbtn(UploadBtn);
+		Thread.sleep(5000);
 	}
 }
