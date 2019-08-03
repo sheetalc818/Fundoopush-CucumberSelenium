@@ -19,21 +19,21 @@ public class FundoopushDefinitions
 	private FundoopushLoginPage fundoopushloginpage;
 	private FundoopushDashboardPage fundoopushDashboardPage;
 
-//	@When("Successfully Loggedin to Fundoopush using Valid Mail id {string} and Password {string}")
-//	public void successfulLoginToFundoopushWithSpecifiedCredentials(String email, String password) throws InterruptedException 
-//	{
-//		fundoopushloginpage = new FundoopushLoginPage(driver);
-//		fundoopushDashboardPage = fundoopushloginpage.successfulLogin(email, password);
-//	}
-//	
-//	@When("Story card added Successfully by loggedin with Valid Mail id {string} and Password {string}")
-//	public void validateAddedStoryCard(String email, String password) throws InterruptedException  
-//	{
-//		fundoopushloginpage = new FundoopushLoginPage(driver);
-//		fundoopushDashboardPage = fundoopushloginpage.successfulLogin(email, password);
-//		fundoopushDashboardPage = new FundoopushDashboardPage(driver);
-//		fundoopushDashboardPage.validateAddStory();
-//	}
+ 	@When("Successfully Loggedin to Fundoopush using Valid Mail id {string} and Password {string}")
+ 	public void successfulLoginToFundoopushWithSpecifiedCredentials(String email, String password) throws InterruptedException 
+ 	{
+ 		fundoopushloginpage = new FundoopushLoginPage(driver);
+ 		fundoopushDashboardPage = fundoopushloginpage.successfulLogin(email, password);
+ 	}
+ 	
+ 	@When("Story card added Successfully by loggedin with Valid Mail id {string} and Password {string}")
+ 	public void validateAddedStoryCard(String email, String password) throws InterruptedException  
+ 	{
+		fundoopushloginpage = new FundoopushLoginPage(driver);
+		fundoopushDashboardPage = fundoopushloginpage.successfulLogin(email, password);
+		fundoopushDashboardPage = new FundoopushDashboardPage(driver);
+		fundoopushDashboardPage.validateAddStory();
+	}
 	
 	@When("Article added Successfully by loggedin with Valis Mail id {string} and Password {string}")
 	public void validateAddedArticle(String email, String password) throws InterruptedException 
