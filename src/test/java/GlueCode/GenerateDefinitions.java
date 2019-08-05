@@ -24,9 +24,9 @@ public class GenerateDefinitions
 	{
 		ChromeOptions options = new ChromeOptions();
 //		options.addArguments("--headless");
-//		options.addArguments("--disable-dev-shm-usage");
-//		options.addArguments("--no-sandbox");
-//		options.addArguments("--disable-notifications");
+		options.addArguments("--disable-dev-shm-usage");
+		options.addArguments("--no-sandbox");
+		options.addArguments("--disable-notifications");
 		System.setProperty("webdriver.chrome.driver","src/test/resources/Driver/chromedriver");
 		driver = new ChromeDriver(options);
 		driver.get("https://fundoopush-dev.bridgelabz.com/login");
